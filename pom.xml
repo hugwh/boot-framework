@@ -15,11 +15,12 @@
     <description>聚合模块</description>
 
     <modules>
-        <module>boot-web</module>
         <module>boot-api</module>
         <module>boot-repository</module>
         <module>boot-service</module>
-        <!--<module>boot-generator</module>-->
+        <module>boot-generator</module>
+        <module>boot-shiro</module>
+        <module>boot-web</module>
     </modules>
 
     <properties>
