@@ -1,22 +1,19 @@
 package cn.hug.boot.api.model.entity;
 
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User extends Model {
-    private Long uid;       // 用户id
-    private String uname;   // 登录名，不可改
-    private String nick;    // 用户昵称，可改
-    private String pwd;     // 已加密的登录密码
-    private String salt;    // 加密盐值
-    private Date created;   // 创建时间
-    private Date updated;   // 修改时间
-    private Set<String> roles = new HashSet<>();    //用户所有角色值，用于shiro做角色权限的判断
-    //用户所有权限值，用于shiro做资源权限的判断
-    private Set<String> perms = new HashSet<>();
+    private Integer uid;
+    private String username;
+    private String password;
+    private Set<Role> roles = new HashSet<>();
 }
