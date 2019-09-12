@@ -5,24 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.7.RELEASE</version>
+        <version>2.1.8.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>cn.hug</groupId>
-    <artifactId>boot-framework</artifactId>
+    <groupId>com.hug</groupId>
+    <artifactId>boot-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>boot-framework</name>
-    <description>聚合模块</description>
-
-    <modules>
-        <module>boot-api</module>
-        <module>boot-repository</module>
-        <module>boot-service</module>
-        <module>boot-generator</module>
-        <module>boot-shiro</module>
-        <module>boot-web</module>
-        <module>boot-app</module>
-    </modules>
+    <name>boot-app</name>
+    <description>app端</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -38,6 +28,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hug</groupId>
+            <artifactId>boot-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
