@@ -22,6 +22,7 @@
         <module>boot-shiro</module>
         <module>boot-web</module>
         <module>boot-app</module>
+        <module>boot-token</module>
     </modules>
 
     <properties>

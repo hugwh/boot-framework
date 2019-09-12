@@ -8,11 +8,11 @@
         <version>2.1.8.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.hug</groupId>
-    <artifactId>boot-app</artifactId>
+    <groupId>cn.hug</groupId>
+    <artifactId>boot-token</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>boot-app</name>
-    <description>app端</description>
+    <name>boot-token</name>
+    <description>token创建，签名，校验</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -31,14 +31,13 @@
         </dependency>
 
         <dependency>
-            <groupId>cn.hug</groupId>
-            <artifactId>boot-service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
             <groupId>cn.hug</groupId>
-            <artifactId>boot-token</artifactId>
+            <artifactId>boot-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>

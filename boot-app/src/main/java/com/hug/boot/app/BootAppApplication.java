@@ -1,8 +1,12 @@
 package com.hug.boot.app;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
+@ComponentScan("cn.hug.boot")
+@MapperScan("cn.hug.boot.repository.mapper")
 @SpringBootApplication
 public class BootAppApplication {
 
