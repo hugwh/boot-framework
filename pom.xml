@@ -18,11 +18,9 @@
         <module>boot-api</module>
         <module>boot-repository</module>
         <module>boot-service</module>
-        <module>boot-generator</module>
-        <module>boot-shiro</module>
         <module>boot-web</module>
         <module>boot-app</module>
-        <module>boot-token</module>
+        <module>boot-component</module>
     </modules>
 
     <properties>
