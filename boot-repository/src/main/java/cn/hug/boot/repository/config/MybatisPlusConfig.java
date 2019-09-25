@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Profile;
  * @date: 2019-03-19 11:23
  */
 @Configuration
-@MapperScan("com.hug.boot.mapper")//这个注解，作用相当于下面的@Bean MapperScannerConfigurer，2者配置1份即可
+@MapperScan("cn.hug.boot.repository.mapper")//这个注解，作用相当于下面的@Bean MapperScannerConfigurer，2者配置1份即可
 public class MybatisPlusConfig {
     /**
      * 分页插件

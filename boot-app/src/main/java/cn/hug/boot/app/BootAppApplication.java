@@ -1,4 +1,4 @@
-package com.hug.boot.app;
+package cn.hug.boot.app;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

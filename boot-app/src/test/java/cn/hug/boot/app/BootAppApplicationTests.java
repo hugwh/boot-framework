@@ -1,4 +1,4 @@
-package com.hug.boot.app;
+package cn.hug.boot.app;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

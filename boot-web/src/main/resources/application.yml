@@ -1,3 +1,7 @@
+server:
+  port: 1802
+  servlet:
+    context-path: /web
 spring:
   datasource:
     url: jdbc:mysql://120.79.197.55:3306/hug-boot?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
