@@ -1,6 +1,6 @@
 package cn.hug.boot.app.aspect;
 
-import cn.hug.boot.api.exception.AuthException;
+import cn.hug.boot.api.exception.BusinessException;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -57,7 +57,7 @@ public class ControllerAspect {
         log.info("HTTP_METHOD : " + request.getMethod());
         log.info("IP : " + request.getRemoteAddr());
         log.info("CLASS_METHOD : " + pjp.getSignature().getDeclaringTypeName() + "." + pjp.getSignature().getName());
-        log.info("REQUEST ARGS : " + JSON.toJSONString(pjp.getArgs()));
+        log.info("REQUEST_ARGS : " + JSON.toJSONString(pjp.getArgs()));
 
         long startTime = System.currentTimeMillis();
         try {
@@ -66,12 +66,12 @@ public class ControllerAspect {
             log.info("RESPONSE:{}", response != null ? JSON.toJSONString(response) : "");
             return response;
         } catch (Throwable e) {
-            if (e instanceof AuthException) {
-                log.info("RESPONSE ERROR:{}", ((AuthException) e).getMessage());
+            if (e instanceof BusinessException) {
+                log.info("RESPONSE_ERROR:{}", e.getMessage());
             } else if (e instanceof MethodArgumentNotValidException) {
-                log.info("RESPONSE ERROR:{}", e.getMessage());
+                log.info("RESPONSE_ERROR:{}", e.getMessage());
             } else {
-                log.error("RESPONSE ERROR:{}", Arrays.toString(e.getStackTrace()));
+                log.error("RESPONSE_ERROR:{}", Arrays.toString(e.getStackTrace()));
             }
             throw e;
         } finally {
