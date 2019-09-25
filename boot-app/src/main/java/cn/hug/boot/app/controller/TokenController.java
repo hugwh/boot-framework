@@ -2,6 +2,7 @@ package cn.hug.boot.app.controller;
 
 import cn.hug.boot.api.model.dto.result.ResultDto;
 import cn.hug.boot.token.service.ITokenService;
+import cn.hutool.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,6 +23,9 @@ public class TokenController {
     @GetMapping("/token/{id}")
     public ResultDto getToken(@PathVariable String id) {
         String token = tokenService.create(id);
-        return new ResultDto(token);
+        JSONObject data = new JSONObject();
+        data.put("token", token);
+
+        return new ResultDto(data);
     }
 }

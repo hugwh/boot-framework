@@ -10,5 +10,5 @@ package cn.hug.boot.token.service;
 public interface ITokenService {
     String create(String uid);
 
-    String authentication(String token);
+    void authentication(String token);
 }

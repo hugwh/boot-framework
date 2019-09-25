@@ -1,5 +1,6 @@
 package cn.hug.boot.token.service.impl;
 
+import cn.hug.boot.api.exception.AuthException;
 import cn.hug.boot.token.service.ITokenService;
 import cn.hutool.crypto.SecureUtil;
 import org.springframework.stereotype.Service;
@@ -29,9 +30,9 @@ public class TokenService implements ITokenService {
     }
 
     @Override
-    public String authentication(String token) {
+    public void authentication(String token) {
         //TODO 缓存中取出验证,验证成功返回用户id
-
-        return null;
+        throw new AuthException("token错误");
+//        return null;
     }
 }
