@@ -10,31 +10,16 @@
     </parent>
     <groupId>cn.hug</groupId>
     <artifactId>boot-repository</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${boot.repository.version}</version>
     <name>boot-repository</name>
     <packaging>jar</packaging>
-    <description>存储层</description>
-
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
+    <description>持久层</description>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>cn.hug</groupId>
             <artifactId>boot-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${boot.api.version}</version>
         </dependency>
 
         <!-- mysql connector -->
@@ -48,7 +33,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>1.0.26</version>
+            <version>${druid.version}</version>
         </dependency>
     </dependencies>
 </project>

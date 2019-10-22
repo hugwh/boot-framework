@@ -15,14 +15,19 @@
     <packaging>pom</packaging>
     <description>框架组件，依赖使用</description>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
     <modules>
+<!--
         <module>boot-generator</module>
+-->
         <module>boot-shiro</module>
         <module>boot-token</module>
         <module>boot-api-version</module>
     </modules>
+
+    <properties>
+        <shiro-core.version>1.2.3</shiro-core.version>
+        <shiro-spring.version>1.2.3</shiro-spring.version>
+        <thymeleaf-extras-shiro.version>2.0.0</thymeleaf-extras-shiro.version>
+        <spring-context-support.version>5.0.7.RELEASE</spring-context-support.version>
+    </properties>
 </project>

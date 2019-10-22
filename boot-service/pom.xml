@@ -10,27 +10,12 @@
     </parent>
     <groupId>cn.hug</groupId>
     <artifactId>boot-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${boot.service.version}</version>
     <name>boot-service</name>
     <packaging>jar</packaging>
     <description>业务层，接口实现</description>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -44,13 +29,13 @@
         <dependency>
             <groupId>cn.hug</groupId>
             <artifactId>boot-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${boot.api.version}</version>
         </dependency>
 
         <dependency>
             <groupId>cn.hug</groupId>
             <artifactId>boot-repository</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${boot.repository.version}</version>
         </dependency>
     </dependencies>
 </project>

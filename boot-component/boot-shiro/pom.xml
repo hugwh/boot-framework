@@ -10,27 +10,12 @@
     </parent>
     <groupId>cn.hug</groupId>
     <artifactId>boot-shiro</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${boot.shiro.version}</version>
     <name>boot-shiro</name>
     <packaging>jar</packaging>
     <description>shiro权限管理</description>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -39,40 +24,40 @@
         <dependency>
             <groupId>cn.hug</groupId>
             <artifactId>boot-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${boot.api.version}</version>
         </dependency>
 
         <dependency>
             <groupId>cn.hug</groupId>
             <artifactId>boot-repository</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${boot.repository.version}</version>
         </dependency>
 
         <!-- apache shiro 依赖 -->
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-core</artifactId>
-            <version>1.2.3</version>
+            <version>${shiro-core.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-spring</artifactId>
-            <version>1.2.3</version>
+            <version>${shiro-spring.version}</version>
         </dependency>
 
         <!--在springboot2.0中需要注意一个问题，那就是shiro和thymeleaf的支持依赖需要使用2.0.0-->
         <dependency>
             <groupId>com.github.theborakompanioni</groupId>
             <artifactId>thymeleaf-extras-shiro</artifactId>
-            <version>2.0.0</version>
+            <version>${thymeleaf-extras-shiro.version}</version>
         </dependency>
 
         <!-- spring 工具包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
-            <version>5.0.7.RELEASE</version>
+            <version>${spring-context-support.version}</version>
         </dependency>
 
         <!--&lt;!&ndash; jsp 依赖 &ndash;&gt;-->
