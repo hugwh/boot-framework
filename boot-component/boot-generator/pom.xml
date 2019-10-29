@@ -10,33 +10,22 @@
     </parent>
     <groupId>cn.hug</groupId>
     <artifactId>boot-generator</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${boot.generator.version}</version>
     <name>boot-generator</name>
     <packaging>jar</packaging>
     <description>mybatis-plus代码生成器</description>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>cn.hug</groupId>
             <artifactId>boot-repository</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${boot.repository.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
-            <version>3.2.0</version>
+            <version>${mybatis-plus-generator.version}</version>
         </dependency>
     </dependencies>
 
