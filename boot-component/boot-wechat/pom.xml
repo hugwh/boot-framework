@@ -4,22 +4,22 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>cn.hug</groupId>
-        <artifactId>boot-framework</artifactId>
+        <artifactId>boot-component</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>cn.hug</groupId>
-    <artifactId>boot-component</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>boot-component</name>
-    <packaging>pom</packaging>
-    <description>框架组件，依赖使用</description>
+    <artifactId>boot-wechat</artifactId>
+    <version>${boot.wechat.version}</version>
+    <name>boot-wechat</name>
+    <description>微信服务</description>
 
-    <modules>
-        <module>boot-generator</module>
-        <module>boot-shiro</module>
-        <module>boot-token</module>
-        <module>boot-api-version</module>
-        <module>boot-wechat</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>cn.hug</groupId>
+            <artifactId>boot-api</artifactId>
+            <version>${boot.api.version}</version>
+        </dependency>
+    </dependencies>
+
 </project>
