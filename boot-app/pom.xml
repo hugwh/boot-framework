@@ -32,6 +32,12 @@
             <artifactId>boot-token</artifactId>
             <version>${boot.token.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>cn.hug</groupId>
+            <artifactId>boot-wechat</artifactId>
+            <version>${boot.wechat.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
