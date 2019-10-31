@@ -8,39 +8,39 @@ spring:
     url: jdbc:mysql://120.79.197.55:3306/hug-boot?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
     username: root
     password: P@ssw0rd
-    # ³õÊ¼Á¬½ÓÊı
+    # åˆå§‹è¿æ¥æ•°
     initial-size: 10
-    # ×î´óÁ¬½Ó³ØÊıÁ¿
+    # æœ€å¤§è¿æ¥æ± æ•°é‡
     max-active: 100
-    # ×îĞ¡Á¬½Ó³ØÊıÁ¿
+    # æœ€å°è¿æ¥æ± æ•°é‡
     min-idle: 10
-    # ÅäÖÃ»ñÈ¡Á¬½ÓµÈ´ı³¬Ê±µÄÊ±¼ä
+    # é…ç½®è·å–è¿æ¥ç­‰å¾…è¶…æ—¶çš„æ—¶é—´
     max-wait: 60000
 #mybatis plus
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
-  #ÊµÌåÉ¨Ãè£¬¶à¸öpackageÓÃ¶ººÅ»òÕß·ÖºÅ·Ö¸ô
+  #å®ä½“æ‰«æï¼Œå¤šä¸ªpackageç”¨é€—å·æˆ–è€…åˆ†å·åˆ†éš”
   typeAliasesPackage: cn.hug.boot.api.model.entity
   #typeEnumsPackage: com.baomidou.springboot.entity.enums
   global-config:
-    #Ë¢ĞÂmapper µ÷ÊÔÉñÆ÷
+    #åˆ·æ–°mapper è°ƒè¯•ç¥å™¨
     db-config:
-      #Ö÷¼üÀàĞÍ  0:"Êı¾İ¿âID×ÔÔö", 1:"ÓÃ»§ÊäÈëID",2:"È«¾ÖÎ¨Ò»ID (Êı×ÖÀàĞÍÎ¨Ò»ID)", 3:"È«¾ÖÎ¨Ò»ID UUID";
+      #ä¸»é”®ç±»å‹  0:"æ•°æ®åº“IDè‡ªå¢", 1:"ç”¨æˆ·è¾“å…¥ID",2:"å…¨å±€å”¯ä¸€ID (æ•°å­—ç±»å‹å”¯ä¸€ID)", 3:"å…¨å±€å”¯ä¸€ID UUID";
       id-type: AUTO
-      #×Ö¶Î²ßÂÔ 0:"ºöÂÔÅĞ¶Ï",1:"·Ç NULL ÅĞ¶Ï"),2:"·Ç¿ÕÅĞ¶Ï"
+      #å­—æ®µç­–ç•¥ 0:"å¿½ç•¥åˆ¤æ–­",1:"é NULL åˆ¤æ–­"),2:"éç©ºåˆ¤æ–­"
       field-strategy: not_empty
-      #ÍÕ·åÏÂ»®Ïß×ª»»
+      #é©¼å³°ä¸‹åˆ’çº¿è½¬æ¢
       column-underline: true
-      #Êı¾İ¿â´óĞ´ÏÂ»®Ïß×ª»»
+      #æ•°æ®åº“å¤§å†™ä¸‹åˆ’çº¿è½¬æ¢
       #capital-mode: true
-      #Âß¼­É¾³ıÅäÖÃ
+      #é€»è¾‘åˆ é™¤é…ç½®
       logic-delete-value: 1
       logic-not-delete-value: 0
       db-type: mysql
     refresh: true
-    #×Ô¶¨ÒåÌî³ä²ßÂÔ½Ó¿ÚÊµÏÖ
+    #è‡ªå®šä¹‰å¡«å……ç­–ç•¥æ¥å£å®ç°
     #meta-object-handler: com.baomidou.springboot.xxx
-    #×Ô¶¨ÒåSQL×¢ÈëÆ÷
+    #è‡ªå®šä¹‰SQLæ³¨å…¥å™¨
   #sql-injector: com.baomidou.mybatisplus.extension.injector.LogicSqlInjector
   configuration:
     map-underscore-to-camel-case: true
