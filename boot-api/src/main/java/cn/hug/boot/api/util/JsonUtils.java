@@ -2,6 +2,10 @@ package cn.hug.boot.api.util;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.lang3.StringUtils;
+import org.omg.CORBA.PUBLIC_MEMBER;
+
+import java.util.Map;
 
 /**
  * json工具类
@@ -38,7 +42,45 @@ public class JsonUtils {
      * @return
      */
     public static <T> T toBean(JSONObject jsonObject, Class<T> clazz) {
+        if (jsonObject == null) {
+            return null;
+        }
         String str = JSONObject.toJSONString(jsonObject);
         return toBean(str, clazz);
+    }
+
+    /**
+     * json转map
+     * @param json
+     * @return
+     */
+    public static Map<String, Object> jsonStringToMap(String json) {
+        if (StringUtils.isEmpty(json)) {
+            return null;
+        }
+        return JSON.parseObject(json, Map.class);
+    }
+
+    /**
+     * map转json
+     * @param m
+     * @return
+     */
+    public static JSONObject toJson(Map m) {
+        JSONObject json = new JSONObject(m);
+        return json;
+    }
+
+    /**
+     * json转字符串
+     * @param jsonObject
+     * @return
+     */
+    public static String toString(JSONObject jsonObject) {
+        if (jsonObject == null) {
+            return null;
+        }
+
+        return jsonObject.toJSONString();
     }
 }

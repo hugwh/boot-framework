@@ -1,5 +1,6 @@
 package cn.hug.boot.token.service.impl;
 
+import cn.hug.boot.api.exception.AuthException;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.SecureUtil;
 import cn.hug.boot.token.service.ISignatureService;
@@ -27,7 +28,7 @@ public class SignatureService implements ISignatureService {
      * @return
      */
     @Override
-    public String signature(Map<String, Object> paramBody, String token, Long timestamp) {
+    public String signature(Map<String, Object> paramBody, String token, String timestamp) {
         paramBody.put("token", token);
         paramBody.put("timestamp", timestamp);
 
@@ -55,9 +56,17 @@ public class SignatureService implements ISignatureService {
      * @return
      */
     @Override
-    public boolean authSignature(Map<String, Object> paramBody, String token, Long timestamp, String signature) {
+    public void authSignature(Map<String, Object> paramBody, String token, String timestamp, String signature) {
+        //TODO 验证时间戳时效性
+
         String rightSign = signature(paramBody, token, timestamp);
-        return StrUtil.equals(rightSign, signature);
+        boolean auth = StrUtil.equals(rightSign, signature);
+
+        if (!auth) {
+            throw new AuthException("签名错误");
+        }
+
+        log.info("验证签名成功!");
     }
 
     /**

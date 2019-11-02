@@ -22,7 +22,7 @@ public class SignatureServiceTests {
     @Test
     public void testSign() {
         String token = "abc";
-        long timestamp = new Date().getTime();
+        String timestamp = new Date().getTime() + "";
         Map<String, Object> param = new HashMap<>();
         param.put("abc", "abc");
         param.put("Abc", "abc");
@@ -35,9 +35,24 @@ public class SignatureServiceTests {
 
         log.info("签名：{}", sign);
 
-        boolean auth = signatureService.authSignature(param, token, timestamp, sign);
+        signatureService.authSignature(param, token, timestamp, sign);
 
-        log.info("验签：{}", auth);
+        log.info("验签：{}", "right");
     }
 
+    @Test
+    public void testSign2() {
+        String token = "abc";
+        String timestamp = new Date().getTime() + "";
+        log.info("timestamp:{}", timestamp);
+        Map<String, Object> param = new HashMap<>();
+        param.put("test", "abc");
+        String sign = signatureService.signature(param, token, timestamp);
+
+        log.info("签名：{}", sign);
+
+        signatureService.authSignature(param, token, timestamp, sign);
+
+        log.info("验签：{}", "right");
+    }
 }

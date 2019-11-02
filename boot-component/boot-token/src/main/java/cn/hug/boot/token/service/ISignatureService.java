@@ -17,7 +17,7 @@ public interface ISignatureService {
      * @param timestamp
      * @return
      */
-    String signature(Map<String, Object> paramBody, String token, Long timestamp);
+    String signature(Map<String, Object> paramBody, String token, String timestamp);
 
     /**
      * 签名验证
@@ -25,7 +25,6 @@ public interface ISignatureService {
      * @param token
      * @param timestamp
      * @param signature
-     * @return
      */
-    boolean authSignature(Map<String, Object> paramBody, String token, Long timestamp, String signature);
+    void authSignature(Map<String, Object> paramBody, String token, String timestamp, String signature);
 }
