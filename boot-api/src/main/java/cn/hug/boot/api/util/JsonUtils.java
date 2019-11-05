@@ -3,7 +3,6 @@ package cn.hug.boot.api.util;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringUtils;
-import org.omg.CORBA.PUBLIC_MEMBER;
 
 import java.util.Map;
 
@@ -19,7 +18,7 @@ public class JsonUtils {
      * @param str
      * @return
      */
-    public static JSONObject toJSON(String str) {
+    public static JSONObject stringToJSON(String str) {
         return JSON.parseObject(str);
     }
 
@@ -30,7 +29,7 @@ public class JsonUtils {
      * @param <T>
      * @return
      */
-    public static <T> T toBean(String str, Class<T> clazz) {
+    public static <T> T stringToBean(String str, Class<T> clazz) {
         return JSON.parseObject(str, clazz);
     }
 
@@ -41,12 +40,12 @@ public class JsonUtils {
      * @param <T>
      * @return
      */
-    public static <T> T toBean(JSONObject jsonObject, Class<T> clazz) {
+    public static <T> T stringToBean(JSONObject jsonObject, Class<T> clazz) {
         if (jsonObject == null) {
             return null;
         }
         String str = JSONObject.toJSONString(jsonObject);
-        return toBean(str, clazz);
+        return stringToBean(str, clazz);
     }
 
     /**
@@ -66,7 +65,7 @@ public class JsonUtils {
      * @param m
      * @return
      */
-    public static JSONObject toJson(Map m) {
+    public static JSONObject mapToJson(Map m) {
         JSONObject json = new JSONObject(m);
         return json;
     }
@@ -76,7 +75,7 @@ public class JsonUtils {
      * @param jsonObject
      * @return
      */
-    public static String toString(JSONObject jsonObject) {
+    public static String jsonToString(JSONObject jsonObject) {
         if (jsonObject == null) {
             return null;
         }

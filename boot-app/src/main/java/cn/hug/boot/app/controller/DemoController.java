@@ -25,7 +25,7 @@ public class DemoController {
         return "rest";
     }
 
-    @RequestMapping(value = "/index")
+    @GetMapping(value = "/index")
     public String index() {
         log.debug("记录debug日志");
         log.info("记录index方法");

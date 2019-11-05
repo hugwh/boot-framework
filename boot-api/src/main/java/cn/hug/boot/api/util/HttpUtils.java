@@ -3,7 +3,6 @@ package cn.hug.boot.api.util;
 import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.sun.org.apache.regexp.internal.RE;
 
 /**
  * http工具类
@@ -19,7 +18,7 @@ public class HttpUtils {
 
     public static <T> T get(String url, Class<T> clazz) {
         String result = HttpUtil.get(url);
-        T t = JsonUtils.toBean(result, clazz);
+        T t = JsonUtils.stringToBean(result, clazz);
         return t;
     }
 }
